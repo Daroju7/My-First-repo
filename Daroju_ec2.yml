@@ -1,12 +1,18 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: ---
 Resources:
-myEC2Instance:
-  Type: AWS::EC2::Instance
-  Properties:
-    KeyName: 
-    ImageId:  ami-09d3b3274b6c5d4aa
-    InstanceType: 
-    Monitoring: true|false
+  MyEC2Instance: 
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: ami-08c40ec9ead489470
+      BlockDeviceMappings: 
+      - DeviceName: "/dev/sdm"
+        Ebs: 
+          VolumeType: "io1"
+          Iops: "200"
+          DeleteOnTermination: "false"
+          VolumeSize: "20"
+      - DeviceName: "/dev/sdk"
+        NoDevice: {}
     
 
