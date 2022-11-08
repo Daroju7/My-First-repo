@@ -5,16 +5,8 @@ myEC2Instance:
   Type: AWS::EC2::Instance
   Properties:
     KeyName: 
-    DisableApiTermination: 
     ImageId:  ami-09d3b3274b6c5d4aa
     InstanceType: 
     Monitoring: true|false
-    SecurityGroupIds:
-      - sg-id
-   # UserData: !Base64 |
-      #!/bin/bash -ex
-      # put your script here
-    Tags:
-      - Key: key
-        Value: value
+    
 
