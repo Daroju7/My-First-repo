@@ -1,13 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: ---
-Metadata: 
-
-Parameters: 
-
-Mappings: 
-
-Conditions: 
-
 Resources:
 myEC2Instance:
   Type: AWS::EC2::Instance
@@ -26,4 +18,3 @@ myEC2Instance:
       - Key: key
         Value: value
 
-Outputs:
